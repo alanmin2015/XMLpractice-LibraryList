@@ -1,0 +1,17 @@
+extends layout
+
+block main-content
+  h1 Libraries  
+    each library in libraries
+      - let locName=library.querySelector("name").textContent;
+      - let locAdd=library.querySelector("address").textContent;
+      - let locPhone=library.querySelector("phoneNumber").textContent;
+      - let locDescrip=library.querySelector("description").textContent;
+      - let libID=library.getAttribute("id");
+      div 
+        h2 
+         a(href=`/branch/${libID}`) #{locName}
+        p #{locAdd}
+        p #{locPhone}
+        p !{locDescrip}
+        p #{libID}

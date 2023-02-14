@@ -1,0 +1,13 @@
+extends layout
+
+block main-content
+    h1.page-title Branch
+      - let branchName = branch.querySelector("name").textContent;
+      - let branchAddress = branch.querySelector("address").textContent ;
+      - let branchNumb = branch.querySelector("phoneNumber").textContent ;
+      - let branchDesc = branch.querySelector("description").textContent;
+       h2 #{branchName}
+       p #{branchAddress}
+       p #{branchNumb}
+       p !{branchDesc}
+
